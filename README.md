@@ -37,17 +37,14 @@
 ![alt text](/assets/4.jpg)
 <br /><br /><br /><br />
 
-<strong>5. Run the remaining cells to optain best.onynx. Download this directory and place the onnyx file to use it with docker container</strong>
-<br />
+### 5. Run the remaining cells to optain best.onynx. Download this directory and place the onnyx file to use it with docker container
 - Run the remaining cells to generate best.onnx
-<br />
 ![alt text](/assets/5.jpg)
 <br /><br />
 ![alt text](/assets/5.1.jpg)
 <br /><br /><br /><br />
 
-<strong>6. Run the following docker commands in this directory to begin the model conversion</strong>
-<br />
+### 6. Run the following docker commands in this directory to begin the model conversion
 - Built the docker 
 ```bash
 docker build -t sophgo-mlir:v1.7 .
@@ -55,6 +52,6 @@ docker build -t sophgo-mlir:v1.7 .
 <br /><br />
 - run it
 <br />
-```
+```bash
 docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
 ```
