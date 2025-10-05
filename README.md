@@ -11,8 +11,8 @@
 
 ## How to use to project
 
-<strong>1. For object detection tasks, use the TRAINYOLOV11-detect file. For classification tasks, use the TRAINYOLOV11-cls file.</strong>
-<br /><br /><br /><br />
+<strong>1. For object detection tasks, use the TRAINYOLOV11-detect file. For classification tasks, use the TRAINYOLOV11-cls file. Upload them to Google Colab</strong>
+<br /><br />
 
 <strong>2. Change runtime in google colab to GPU</strong>
 <br /><br />
