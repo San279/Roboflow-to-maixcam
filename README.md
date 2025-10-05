@@ -11,14 +11,14 @@
 
 ## How to use to project
 
-<strong>1. For object detection tasks, use the TRAINYOLOV11-detect file. For classification tasks, use the TRAINYOLOV11-cls file. Upload them to Google Colab</strong>
-<br />
-<strong>2. Change runtime in google colab to GPU</strong>
+#### 1. For object detection tasks, use the TRAINYOLOV11-detect file. For classification tasks, use the TRAINYOLOV11-cls file. Upload them to Google Colab
+
+#### 2. Change runtime in google colab to GPU
 <br />
 ![alt text](/assets/2.jpg)
 <br /><br /><br /><br />
 
-<strong>3. Select a dataset from roboflow then paste the download code on the third cell</strong>
+#### 3. Select a dataset from roboflow then paste the download code on the third cell
 <br />
 - Select version -> Download Dataset -> Show download code 
 <br/>
@@ -37,21 +37,23 @@
 ![alt text](/assets/4.jpg)
 <br /><br /><br /><br />
 
-### 5. Run the remaining cells to optain best.onynx. Download this directory and place the onnyx file to use it with docker container
+#### 5. Run the remaining cells to optain best.onynx. Download this directory and place the onnyx file to use it with docker container
+<br />
 - Run the remaining cells to generate best.onnx
+<br />
 ![alt text](/assets/5.jpg)
 <br /><br />
 ![alt text](/assets/5.1.jpg)
 <br /><br /><br /><br />
 
 ### 6. Run the following docker commands in this directory to begin the model conversion
+<br />
 - Built the docker 
 ```bash
 docker build -t sophgo-mlir:v1.7 .
 ```
-<br /><br />
-- run it
 <br />
+- run it
 ```bash
 docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
 ```
