@@ -3,6 +3,7 @@
 - Google account to use Google Colab
 - Selected Roboflow dataset
 - MaixCAM
+- [MaixVision IDE](https://wiki.sipeed.com/maixvision#)
 
 ## Project files descriptions
 - Dockerfile - Docker image to convert .onyx model to .cvimodel
