@@ -8,13 +8,15 @@
 <br/>
 <br/>
 
-<strong>1. Model transformation</strong>
+#### 1. Model transformation
 
 - For detection model upload your onnyx file to (https://netron.app/) and place the name of the last convolutions in output_names "", Alternatively if you used yolov11 you can use this default command 
 <br/>
 
 - Make sure that input_shapes match imgz from your colab command
+
 ![alt text](assets/1-det.jpg)
+
 ```
 model_transform \
 --model_name yolov11n \
@@ -29,7 +31,7 @@ model_transform \
 ```
 <br/><br/>
 
-<strong>2. Quantization calibration</strong>
+#### 2. Quantization calibration
 
 - For calibration, use approximately 100 unlabeled images. These images must be specific to your model's target task (e.g., if you're detecting cars, use car images). The default face detection images in this repository should only be used if your model is a person detector
 
@@ -41,9 +43,10 @@ run_calibration yolov11n.mlir \
 ```
 <br/><br/>
 
-<strong>3. Conversion</strong>
+#### 3. Conversion
 
 - The last step is to convert the model into .cvimodel
+
 ```
 model_deploy \
 --mlir yolov11n.mlir \
@@ -54,25 +57,29 @@ model_deploy \
 ```
 <br/><br/>
 
-<strong>4. Edit model-det.mud labels</strong>
+#### 4. Edit model-det.mud labels
 
 - Open model-det and add your own labels. To view your labels navigate to the main page of the project to view the classes
 <br/>
+
 ![alt text](assets/4-det.jpg) 
 <br/>
 
 - Edit the label accordingly
 <br/>
+
 ![alt text](assets/4.1-det.jpg) 
 <br/><br/>
 
 
-<strong>5. Final step, upload model and run script in Maixcam</strong>
-
+#### 5. Final step, upload model and run script in Maixcam
 - Connect to MaixCam using MaixVision IDE. Upload (model-det.mud) and (yolov11n_cv181x_int8_sym.cvimodel) into MaixCam models directory
 <br/>
+
 ![alt text](assets/5-det.jpg) 
 <br/>
 
 - Run the script detect.py
+
 ![alt text](assets/5.1-det.jpg) 
+
