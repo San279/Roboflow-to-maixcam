@@ -19,12 +19,12 @@
 <br /><br /><br /><br />
 
 #### 3. Select a dataset from roboflow then paste the download code on the third cell
-<br />
-- Select version -> Download Dataset -> Show download code 
-<br/>
+- Select version -> Download Dataset -> Show download code
+- 
 ![alt text2](assets/3.jpg)
 <br /><br />
 - Place on on the third cell
+
 ![alt text3](/assets/3.1.jpg)
 <br /><br /><br /><br />
 
