@@ -15,17 +15,17 @@
 
 #### 2. Change runtime in google colab to GPU
 <br />
-![alt text](/assets/2.jpg)
+![alt text1](/assets/2.jpg)
 <br /><br /><br /><br />
 
 #### 3. Select a dataset from roboflow then paste the download code on the third cell
 <br />
 - Select version -> Download Dataset -> Show download code 
 <br/>
-![alt text](/assets/3.jpg)
+![alt text2](assets/3.jpg)
 <br /><br />
 - Place on on the third cell
-![alt text](/assets/3.1.jpg)
+![alt text3](/assets/3.1.jpg)
 <br /><br /><br /><br />
 
 <strong>4. Adjust the epoch and imgz to your likings</strong>
