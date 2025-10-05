@@ -15,7 +15,7 @@
 
 #### 2. Change runtime in google colab to GPU
 <br />
-![alt text1](assets/2.jpg)
+![alt text](assets/datatwo.jpg)
 <br /><br /><br /><br />
 
 #### 3. Select a dataset from roboflow then paste the download code on the third cell
