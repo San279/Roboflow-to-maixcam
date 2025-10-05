@@ -46,7 +46,7 @@
 ![alt text](/assets/5.1.jpg)
 <br /><br /><br /><br />
 
-### 6. Run the following docker commands in this directory to begin the model conversion
+#### 6. Run the following docker commands in this directory to begin the model conversion
 <br />
 - Built the docker 
 ```bash
