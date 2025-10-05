@@ -15,7 +15,7 @@
 
 - Make sure that input_shapes match imgz from your colab command
 
-![alt text](assets/1-det.jpg)
+![alt text](assets/1-cls.jpg)
 
 ```
 model_transform \
