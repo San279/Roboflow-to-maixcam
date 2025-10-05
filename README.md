@@ -35,7 +35,7 @@
 - imgz generally leads to higher accuracy but slower processing speed. The default for classification models is 224. For detection tasks, use a minimum size of 300. Common larger sizes are 320 and 640.
 - The image contain an example of a classification model train for 80 epoch with loss 0.2 which equates to around 80% accurate
 <br/>
-![alt text](/assets/4.jpg)
+![alt text](assets/4.jpg)
 <br /><br /><br /><br />
 
 <strong>5. Run the remaining cells to optain best.onynx. Download this directory and place the onnyx file to use it with docker container</strong>
