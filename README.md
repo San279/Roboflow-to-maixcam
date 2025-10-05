@@ -51,12 +51,12 @@
 <br />
 - Built the docker
 
-```bash
+```
 docker build -t sophgo-mlir:v1.7 .
 ```
 <br />
 - run it
 
-```bash
+```
 docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
 ```

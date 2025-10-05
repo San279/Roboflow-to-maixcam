@@ -4,13 +4,13 @@
 [th](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
 <br/>
 <br/>
-![alt text](assets/det.jpg)
+![alt text](assets/cls.jpg)
 <br/>
 <br/>
 
 #### 1. Model transformation
 
-- For classification model upload your onnyx file to (https://netron.app/) and place the name of the last convolutions in output_names "", Alternatively if you used yolov11 you can use this default command 
+- For classification model you do not need to copy output_names "" from neutron simply removed it like below 
 <br/>
 
 - Make sure that input_shapes match imgz from your colab command
@@ -19,27 +19,25 @@
 
 ```
 model_transform \
---model_name yolov11n \
+--model_name yolo_cls \
 --model_def best.onnx \
---input_shapes [[1,3,320,320]] \
+--input_shapes [[1,3,224,224]] \
 --mean 0.0,0.0,0.0 \
 --scale 0.0039216,0.0039216,0.0039216 \
---keep_aspect_ratio \
 --pixel_format rgb \
---output_names "/model.23/Concat_output_0","/model.23/Concat_1_output_0","/model.23/Concat_2_output_0","/model.23/dfl/conv/Conv_output_0","/model.23/Sigmoid_output_0" \
---mlir yolov11n.mlir
+--mlir yolo_cls.mlir
 ```
 <br/><br/>
 
 #### 2. Quantization calibration
 
-- For calibration, use approximately 100 unlabeled images. These images must be specific to your model's target task (e.g., if you're detecting cars, use car images). The default face detection images in this repository should only be used if your model is a person detector
+- For calibration, use approximately 100 unlabeled images. These images must be specific to your model's target task (e.g., if you're detecting cars, use car images). The default face detection images in this repository should only be used if your model is a gender_age detector
 
 ```
-run_calibration yolov11n.mlir \
---dataset ./calibration_images-det \
+run_calibration yolo_cls.mlir \
+--dataset ./calibration_images_cls \
 --input_num 100 \
--o yolov11n_cali_table
+-o yolo_cls_cali_table
 ```
 <br/><br/>
 
@@ -49,26 +47,26 @@ run_calibration yolov11n.mlir \
 
 ```
 model_deploy \
---mlir yolov11n.mlir \
+--mlir yolo_cls.mlir \
 --quantize INT8 \
---calibration_table yolov11n_cali_table \
+--calibration_table yolo_cls_cali_table \
 --processor cv181x \
---model yolov11n_cv181x_int8_sym.cvimodel
+--model yolo_cls_int8_sym.cvimodel
 ```
 <br/><br/>
 
-#### 4. Edit model-det.mud labels
+#### 4. Edit model-cls.mud labels
 
 - Open model-det and add your own labels. To view your labels navigate to the main page of the project to view the classes
 <br/>
 
-![alt text](assets/4-det.jpg) 
+![alt text](assets/4-cls.jpg) 
 <br/>
 
 - Edit the label accordingly
 <br/>
 
-![alt text](assets/4.1-det.jpg) 
+![alt text](assets/4.1-cls.jpg) 
 <br/><br/>
 
 
@@ -76,10 +74,10 @@ model_deploy \
 - Connect to MaixCam using MaixVision IDE. Upload (model-det.mud) and (yolov11n_cv181x_int8_sym.cvimodel) into MaixCam models directory
 <br/>
 
-![alt text](assets/5-det.jpg) 
+![alt text](assets/5-cls.jpg) 
 <br/>
 
 - Run the script detect.py
 
-![alt text](assets/5.1-det.jpg) 
+![alt text](assets/5.1-cls.jpg) 
 
