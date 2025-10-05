@@ -1,14 +1,16 @@
 ## Converting YOLO11 .onnyx to .cvimodel (REFERECE FROM SOPHGO SG2002)
 [Original repo](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
 <br/>
-[th](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
+
+[en](https://github.com/San279/Roboflow-to-maixcam/blob/main/README-det.md)
 <br/>
-<br/>
+
 ![alt text](assets/det.jpg)
+
 <br/>
 <br/>
 
-#### 1. Model transformation
+#### 1. การแปลงโมเดล (Model transformation)
 
 - For classification model upload your onnyx file to (https://netron.app/) and place the name of the last convolutions in output_names "", Alternatively if you used yolov11 you can use this default command 
 <br/>

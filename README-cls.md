@@ -71,13 +71,13 @@ model_deploy \
 
 
 #### 5. Final step, upload model and run script in Maixcam
-- Connect to MaixCam using MaixVision IDE. Upload (model-det.mud) and (yolov11n_cv181x_int8_sym.cvimodel) into MaixCam models directory
+- Connect to MaixCam using MaixVision IDE. Upload (model-cls.mud) and (yolov11n_cv181x_int8_sym.cvimodel) into MaixCam models directory
 <br/>
 
 ![alt text](assets/5-cls.jpg) 
 <br/>
 
-- Run the script detect.py
+- Run the script classify.py
 
 ![alt text](assets/5.1-cls.jpg) 
 
