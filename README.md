@@ -1,8 +1,4 @@
 # Guide to train models from Roboflow and deploy in maixcam
-
-<br/>
-<br/>
-
 ## What you'll need
 - Google account to use Google Colab
 - Selected Roboflow dataset
@@ -17,7 +13,7 @@
 
 <strong>1. For object detection tasks, use the TRAINYOLOV11-detect file. For classification tasks, use the TRAINYOLOV11-cls file.</strong>
 <br /><br />
-![alt text](/assets/1.jpg)
+![alt text](./assets/1.jpg)
 <br /><br /><br /><br />
 
 <strong>2. Change runtime in google colab to GPU</strong>
