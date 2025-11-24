@@ -3,6 +3,7 @@
 - Google account to use Google Colab
 - Selected Roboflow dataset
 - MaixCAM
+- [Docker](https://www.docker.com/products/docker-desktop/)
 - [MaixVision IDE](https://wiki.sipeed.com/maixvision#)
 
 ## Project files descriptions
