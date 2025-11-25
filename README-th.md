@@ -1,6 +1,11 @@
 # คู่มือการฝึกโมเดลจาก Roboflow และการนำไปใช้งานบน MaixCAM
 [EN](https://github.com/San279/Roboflow-to-maixcam)
-## 
+
+# วีดิโอ Guide
+[การฝีกโมเดล](https://www.youtube.com/watch?v=EtYPPXwuebw)
+[การแปลง model และ Deploy](https://www.youtube.com/watch?v=oZhg0eqBP9s)
+
+## ต้องมี
 - บัญชี Google สำหรับใช้ Google Colab
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - ชุดข้อมูล Roboflow ที่เลือกไว้
