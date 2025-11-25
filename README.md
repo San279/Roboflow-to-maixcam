@@ -1,11 +1,11 @@
 # Guide to train models from Roboflow and deploy in maixcam
+[TH](https://github.com/San279/Roboflow-to-maixcam/blob/main/README-th.md)
 ## What you'll need
 - Google account to use Google Colab
 - Selected Roboflow dataset
 - MaixCAM
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [MaixVision IDE](https://wiki.sipeed.com/maixvision#)
-
 ## Project files descriptions
 - Dockerfile - Docker image to convert .onyx model to .cvimodel
 - TRAINYOLOV11-detect - Colab notebook for training an object detection model
