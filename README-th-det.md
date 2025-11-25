@@ -9,7 +9,24 @@
 <br/>
 <br/>
 
-#### 1. Model transformation
+#### 1. Build และ Run Dockerfile
+- เข้าทอร์มินัลจากรูทโปรเจกต์ (แนะนำให้ใช้ IDE) ถ้าไม่มีใช้วิธีนี้ได้
+![alt text](assets/0-cmd.jpg)
+
+![alt text](assets/0-terminal.jpg)
+- Build Dockerfile
+```
+docker build -t sophgo-mlir:v1.7 .
+```
+<br/><br/>
+
+- Run the Docker image
+```
+docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
+```
+<br/><br/>
+
+#### 2. แปลง Model (Model transformation)
 
 - สำหรับโมเดลตรวจจับวัตถุ ให้อัปโหลดไฟล์ .onnx ของคุณไปที่ https://netron.app/ และใส่ชื่อของ convolution ตัวสุดท้ายใน --output_names "" หรือใช้ YOLO11 สามารถใช้คำสั่งนี้ได้เลย 
 <br/>
@@ -32,7 +49,7 @@ model_transform \
 ```
 <br/><br/>
 
-#### 2. การสอบเทียบค่าความละเอียด (Quantization calibration)
+#### 3. การสอบเทียบค่าความละเอียด (Quantization calibration)
 
 - ให้อัพโหลดใช้รูปภาพเหล่านี้ต้องเป็นภาพที่โมเดลจะได้เห็นตอน deploy ประมาณ 100 รูป (เช่น หากคุณกำลังตรวจจับรถยนต์ ให้ใช้รูปภาพรถยนต์) รูปภาพในแฟ้มนี้สามารถนำไปใช้สำหรับตรวจจับผู้คนเท่านั้น
 
@@ -44,7 +61,7 @@ run_calibration yolov11n.mlir \
 ```
 <br/><br/>
 
-#### 3. การแปลง (Conversion)
+#### 4. การแปลง (Conversion)
 
 - ขั้นตอนสุดท้าย แปลงโมเดลเป็น .cvimodel
 
@@ -58,7 +75,7 @@ model_deploy \
 ```
 <br/><br/>
 
-#### 4. แก้ไข labels ใน model-det.mud
+#### 5. แก้ไข labels ใน model-det.mud
 
 - เปิดไฟล์ model-det.mud และเพิ่ม labels ให้ตรงกับชุดข้อมูลจาก Roboflow หากต้องการดู labels ให้นำทางหน้าหลักของโปรเจกต์เพื่อดูคลาส
 <br/>
@@ -73,7 +90,7 @@ model_deploy \
 <br/><br/>
 
 
-#### 5. อัปโหลดโมเดลและรันสคริปต์
+#### 6. อัปโหลดโมเดลและรันสคริปต์
 - เชื่อมต่อกับ MaixCam โดยใช้ MaixVision IDE อัปโหลดไฟล์ model-det.mud และ (yolov11n_cv181x_int8_sym.cvimodel) ไปยังไดเรกทอรี models ของ MaixCam
 <br/>
 
