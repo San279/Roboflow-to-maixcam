@@ -23,7 +23,7 @@ docker build -t sophgo-mlir:v1.7 .
 
 - Run the Docker image
 ```
-docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
+docker run -it --name tpu_mlir_session tpu-mlir-dev:latest /bin/bash
 ```
 <br/><br/>
 
