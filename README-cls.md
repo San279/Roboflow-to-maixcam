@@ -8,6 +8,23 @@
 <br/>
 <br/>
 
+#### 1. Build and Run Dockerfile
+- Access the terminal from the root's project (Alternative IDE is preferable)
+![alt text](assets/0-cmd.jpg)
+
+![alt text](assets/0-terminal.jpg)
+- Build Dockerfile
+```
+docker build -t sophgo-mlir:v1.7 .
+```
+<br/><br/>
+
+- Run the Docker image
+```
+docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
+```
+<br/><br/>
+
 #### 1. Model transformation
 
 - For classification model you do not need to copy output_names "" from neutron simply removed it like below 
