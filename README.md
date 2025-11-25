@@ -1,5 +1,10 @@
 # Guide to train models from Roboflow and deploy in maixcam
 [TH](https://github.com/San279/Roboflow-to-maixcam/blob/main/README-th.md)
+
+# Video Guide
+[Training](https://www.youtube.com/watch?v=EtYPPXwuebw)
+[Convert/Deploy](https://www.youtube.com/watch?v=oZhg0eqBP9s)
+
 ## What you'll need
 - Google account to use Google Colab
 - Selected Roboflow dataset
