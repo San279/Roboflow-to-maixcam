@@ -12,7 +12,6 @@
 
 #### 1. Build and Run Dockerfile
 - Access the terminal from the root's project (Alternative IDE is preferable)
-<br/>
 ![alt text](assets/0-cmd.jpg)
 
 ![alt text](assets/0-terminal.jpg)
