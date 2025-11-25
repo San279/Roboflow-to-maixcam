@@ -1,4 +1,5 @@
 # คู่มือการฝึกโมเดลจาก Roboflow และการนำไปใช้งานบน MaixCAM
+[EN](https://github.com/San279/Roboflow-to-maixcam)
 ## 
 - บัญชี Google สำหรับใช้ Google Colab
 - [Docker](https://www.docker.com/products/docker-desktop/)
