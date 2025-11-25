@@ -15,7 +15,7 @@
 ![alt text](assets/0-terminal.jpg)
 - Build Dockerfile
 ```
-docker build -t sophgo-mlir:latest .
+docker build -t tpu-mlir-dev:latest .
 ```
 <br/><br/>
 
