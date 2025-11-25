@@ -20,9 +20,13 @@ docker build -t tpu-mlir-dev:latest .
 ```
 <br/><br/>
 
-- Run the Docker image
+- Run Docker สำหรับ windows's cmd
 ```
-docker run -it --name tpu_mlir_session tpu-mlir-dev:latest /bin/bash
+docker run -it --rm -v %CD%:/app tpu-mlir-dev:latest /bin/bash
+```
+- Run Docker สำหรับ linux terminal หรือ powershell
+```
+docker run -it --rm -v ${PWD}:/app tpu-mlir-dev:latest /bin/bash
 ```
 <br/><br/>
 
