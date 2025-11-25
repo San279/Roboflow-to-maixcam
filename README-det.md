@@ -1,8 +1,9 @@
 ## Converting YOLO11 .onnyx to .cvimodel (REFERECE FROM SOPHGO SG2002)
+
+[EN](https://github.com/San279/Roboflow-to-maixcam/blob/main/README-det.md)
+<br/>
 [Original repo](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
 <br/>
-
-[en](https://github.com/San279/Roboflow-to-maixcam/blob/main/README-det.md)
 <br/>
 
 ![alt text](assets/det.jpg)
