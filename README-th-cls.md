@@ -9,6 +9,23 @@
 <br/>
 <br/>
 
+#### 1. Build และ Run Dockerfile
+- เข้าทอร์มินัลจากรูทโปรเจกต์ (แนะนำให้ใช้ IDE) ถ้าไม่มีใช้วิธีนี้ได้
+![alt text](assets/0-cmd.jpg)
+
+![alt text](assets/0-terminal.jpg)
+- Build Dockerfile
+```
+docker build -t sophgo-mlir:v1.7 .
+```
+<br/><br/>
+
+- Run the Docker image
+```
+docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
+```
+<br/><br/>
+
 #### 1. การแปลงโมเดล (Model transformation)
 
 - สำหรับ Classification Model คุณไม่จำเป็นต้องคัดลอก output_names "" จาก Neutron สามารถรัน command ได้เลย
