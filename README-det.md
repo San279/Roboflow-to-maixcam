@@ -10,7 +10,26 @@
 <br/>
 <br/>
 
-#### 1. การแปลงโมเดล (Model transformation)
+#### 1. Build and Run Dockerfile
+- Access the terminal from the root's project (Alternative IDE is preferable)
+<br/>
+![alt text](assets/0-cmd.jpg)
+<br/>
+![alt text](assets/0-terminal.jpg)
+<br/>
+- Build Dockerfile
+```
+docker build -t sophgo-mlir:v1.7 .
+```
+<br/><br/>
+
+- Run the Docker image
+```
+docker run -it --rm -v ${PWD}:/app sophgo-mlir:v1.7 /bin/bash
+```
+<br/><br/>
+
+#### 2. Model transformation
 
 - For classification model upload your onnyx file to (https://netron.app/) and place the name of the last convolutions in output_names "", Alternatively if you used yolov11 you can use this default command 
 <br/>
@@ -33,7 +52,7 @@ model_transform \
 ```
 <br/><br/>
 
-#### 2. Quantization calibration
+#### 3. Quantization calibration
 
 - For calibration, use approximately 100 unlabeled images. These images must be specific to your model's target task (e.g., if you're detecting cars, use car images). The default face detection images in this repository should only be used if your model is a person detector
 
@@ -45,7 +64,7 @@ run_calibration yolov11n.mlir \
 ```
 <br/><br/>
 
-#### 3. Conversion
+#### 4. Conversion
 
 - The last step is to convert the model into .cvimodel
 
@@ -59,7 +78,7 @@ model_deploy \
 ```
 <br/><br/>
 
-#### 4. Edit model-det.mud labels
+#### 5. Edit model-det.mud labels
 
 - Open model-det and add your own labels. To view your labels navigate to the main page of the project to view the classes
 <br/>
@@ -74,7 +93,7 @@ model_deploy \
 <br/><br/>
 
 
-#### 5. Final step, upload model and run script in Maixcam
+#### 6. Final step, upload model and run script in Maixcam
 - Connect to MaixCam using MaixVision IDE. Upload (model-det.mud) and (yolov11n_cv181x_int8_sym.cvimodel) into MaixCam models directory
 <br/>
 
