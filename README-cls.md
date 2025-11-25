@@ -1,7 +1,7 @@
 ## Converting YOLO11 .onnyx to .cvimodel (REFERECE FROM SOPHGO SG2002)
-[Original repo](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
+[TH](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
 <br/>
-[th](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
+[Original repo](https://github.com/AIWintermuteAI/maixcam-model-conversion?tab=readme-ov-file)
 <br/>
 <br/>
 ![alt text](assets/cls.jpg)
